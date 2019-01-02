@@ -6,5 +6,5 @@
 #' @author Helena Edlund \email{helena.edlund@astrazeneca.com}
 #' @author Devin Pastoor \email{devin.pastoor@gmail.com}
 #' @docType package
-#' @name xpmxplore
+#' @name pmxplore
 "_PACKAGE"
