@@ -1,4 +1,4 @@
-library(azrdatareview)
+# library(azrdatareview)
 library(stringr)
 
 context("ggally")

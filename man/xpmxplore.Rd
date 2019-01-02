@@ -2,8 +2,8 @@
 % Please edit documentation in R/xpmxplore.R
 \docType{package}
 \name{xpmxplore}
-\alias{xpmxplore}
-\alias{xpmxplore-package}
+\alias{pmxplore}
+\alias{pmxplore-package}
 \alias{xpmxplore-package}
 \title{xpmxplore: Customized (gg)plots for PK/PD data}
 \description{
