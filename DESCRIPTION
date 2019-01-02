@@ -1,4 +1,4 @@
-Package: xpmxplore
+Package: pmxplore
 Title: Customized (gg)plots for PK/PD data
 Version: 0.1.0
 Authors@R: c(
