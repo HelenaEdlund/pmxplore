@@ -48,7 +48,7 @@ check_message <- function(logical){
   }
 }
 
-
+#' @title Collapses unique values 
 #' @description Prints a comma separated string with unique values of a vector 
 #' @param x vector
 #' @return character vector of length 1
