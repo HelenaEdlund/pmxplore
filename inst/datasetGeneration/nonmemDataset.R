@@ -114,7 +114,8 @@ preDose <- simDataIn %>%
   dplyr::filter(!duplicated(NMSEQSID)) %>% 
   dplyr::mutate(TIME = -0.2, 
          TAPD = NA, 
-         AMT = ".")
+         AMT = ".", 
+         EVID = 0)
 
 simDataIn <- simDataIn %>% 
   rbind(preDose) %>% 
