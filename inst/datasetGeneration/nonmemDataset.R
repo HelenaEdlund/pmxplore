@@ -115,7 +115,8 @@ preDose <- simDataIn %>%
   dplyr::mutate(TIME = -0.2, 
          TAPD = NA, 
          AMT = ".", 
-         EVID = 0)
+         EVID = 0, 
+         BLQ = 1)
 
 simDataIn <- simDataIn %>% 
   rbind(preDose) %>% 
@@ -157,9 +158,6 @@ simDataIn <- simDataIn %>%
 
 # rename to better name 
 pkData <- simDataIn 
-
-
-
 
 # ------------------------------------------------------------------
 #  Add as available dataset in package
