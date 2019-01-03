@@ -47,3 +47,14 @@ check_message <- function(logical){
     message("No")
   }
 }
+
+
+#' @description Prints a comma separated string with unique values of a vector 
+#' @param x vector
+#' @return character vector of length 1
+#' @rdname collapse_unique
+#' @export 
+collapse_unique <- function(x){
+  values <- unique(x)
+  paste(values, collapse=", ")
+}
