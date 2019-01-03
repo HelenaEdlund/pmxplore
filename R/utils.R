@@ -1,8 +1,8 @@
 #' @title Check for included columns
 #' @description Check for included columns
-#' @param vector1 vector of column names included
-#' @param vector2 vector of columns expected to be included
-#' @return message with Yes or a list of missing columns
+#' @param v1 vector of column names included
+#' @param v2 vector of columns expected to be included
+#' @return message with "Passed" or a list of columns in diff
 #' @rdname check_columns
 #' @export 
 #' @importFrom crayon blue

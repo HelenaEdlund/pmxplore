@@ -4,15 +4,15 @@
 \alias{check_columns}
 \title{Check for included columns}
 \usage{
-check_columns(vector1, vector2)
+check_columns(v1, v2)
 }
 \arguments{
-\item{vector1}{vector of column names included}
+\item{v1}{vector of column names included}
 
-\item{vector2}{vector of columns expected to be included}
+\item{v2}{vector of columns expected to be included}
 }
 \value{
-message with Yes or a list of missing columns
+message with "Passed" or a list of columns in diff
 }
 \description{
 Check for included columns
