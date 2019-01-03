@@ -20,3 +20,26 @@ check_columns <- function(v1, v2){
   }
   
 }
+
+#' @title Prints a message based on a single TRUE / FALSE
+#' @description Prints a message based on a single TRUE / FALSE. Only included to be printed as
+#' output in markdown files wihtout using print()
+#' @param logical Single logical 
+#' @return message with "Yes" if TRUE and "No" if FALSE
+#' @rdname check_message
+#' @export 
+check_message <- function(logical){
+  
+  if(!is.logical(logical)){
+    stop("Inputs are not a logical")
+  }
+  if(length(logical) > 1){
+    warning("input not a single logical")
+  }
+  
+  if(logical){
+    message("Yes")
+  } else {
+    message("No")
+  }
+}
