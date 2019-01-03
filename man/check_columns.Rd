@@ -4,12 +4,12 @@
 \alias{check_columns}
 \title{Check for included columns}
 \usage{
-check_columns(.df = rawdata, columns = all_cols)
+check_columns(vector1, vector2)
 }
 \arguments{
-\item{.df}{dataframe to look in, Default: rawdata}
+\item{vector1}{vector of column names included}
 
-\item{columns}{vector of columns that should be included, Default: all_cols}
+\item{vector2}{vector of columns expected to be included}
 }
 \value{
 message with Yes or a list of missing columns
