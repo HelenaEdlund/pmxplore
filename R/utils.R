@@ -8,8 +8,12 @@
 #' @importFrom crayon blue
 check_columns <- function(v1, v2){
   
-  if(!is.character(v1) | !is.character(v2)){
-    stop("One of the inputs are not a character vector")
+  if(!is.vector(v1) | !is.vector(v2)){
+    stop("One of the inputs are not a vector")
+  }
+  
+  if(typeof(v1) != typeof(v2)){
+    stop("The two arguments are not of same type")
   }
   
   if(all(v1 %in% v2)){
