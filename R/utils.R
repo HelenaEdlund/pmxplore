@@ -6,17 +6,17 @@
 #' @rdname check_columns
 #' @export 
 #' @importFrom crayon blue
-check_columns <- function(vector1, vector2){
+check_columns <- function(v1, v2){
   
-  if(!is.character(vector1) | !is.character(vector2)){
+  if(!is.character(v1) | !is.character(v2)){
     stop("One of the inputs are not a character vector")
   }
   
-  if(all(vector1 %in% vector2)){
-    message("Yes")
+  if(all(v1 %in% v2)){
+    message("Passed")
   } else {
-    missing <- paste(vector1[!vector1 %in% vector2], collapse = ", ")
-    message("No, ", crayon::blue(missing), " are missing.")
+    missing <- paste(v1[!v1 %in% v2], collapse = ", ")
+    message(crayon::blue(missing), " are defined in first argument but not in second")
   }
   
 }
