@@ -1,6 +1,6 @@
 # R script to generate nonmem dataset included in the package: 
 # Uncomment the code below to re-generate/add data
-# Last modified: 2018-11-27
+# Last modified: 2019-01-02 (added MDV)
 
 library(magrittr)
 library(ggplot2)
@@ -84,9 +84,6 @@ write.csv(simData, file=outFile, row.names=F, quote=F, na = ".")
 # qpsn -t 20 -r 1500 -- execute run001.mod
 
 
-
-
-
 # ------------------------------------------------------------------
 #  Read in the simulated data and tweak to a plausible example
 # ------------------------------------------------------------------
@@ -146,12 +143,28 @@ simDataIn <- simDataIn %>%
     COMMENT = ifelse(rownames(.) %in% commentRow & EVID == 0 & C =="C", 
                      "Randomly selected for illustration", COMMENT))
 
+
+# Add MDV
+simDataIn <- simDataIn %>% 
+  dplyr::mutate(
+  MDV = ifelse(EVID == 1 | BLQ == 1, 1, 0))
+
+# Re-order columns
+simDataIn <- simDataIn %>% 
+  dplyr::select(C, NMSEQSID,TIME, TAPD, DV, AMT,EVID, MDV, CMT,
+         OCC, BLQ, DOSE, ADDL, II, BWT,AGE,BCRCL,SEXM,RACE,STUDYID,DAY,COMMENT)
+
+# rename to better name 
 pkData <- simDataIn 
+
+
+
 
 # ------------------------------------------------------------------
 #  Add as available dataset in package
 # ------------------------------------------------------------------
 # Write to file
-write.csv(pkData, file="simPKdata.csv", quote = F, row.names = F, na = ".")
+write.csv(pkData, file=file.path("inst","datasetGeneration","simPKdata.csv"),
+          quote = F, row.names = F, na = ".")
 
-use_data(pkData, pkg="../pmxplore")
+use_data(pkData, pkg="../pmxplore", overwrite = T)
