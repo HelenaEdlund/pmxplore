@@ -58,3 +58,33 @@ collapse_unique <- function(x){
   values <- unique(x)
   paste(values, collapse=", ")
 }
+
+#' @title Renames data frame columns based on mapping
+#' @description Prints a comma separated string with unique values of a vector 
+#' @param df data frame to rename
+#' @param mapping_df data frame with 2 columns: first column is original names and second new names
+#' @return data frame
+#' @rdname rename_cols_mapping
+#' @export 
+rename_cols_mapping <- function(df, mapping_df){
+  
+  if(!is.data.frame(df) | !is.data.frame(mapping_df)){
+    stop("One of the inputs is not a data frame")
+  }
+  
+  original_col_name <- mapping_df[,1]
+  new_col_name      <- mapping_df[,2]
+  
+  # check that all columns are found in original dataset
+  if( ! length(original_col_name %in% names(df)) == length(original_col_name)) {
+    
+    missing <- paste(original_col_name[!original_col_name %in% names(df)], collapse = ", ")
+    stop(crayon::blue(missing), " not found in original data frame")
+  }
+  
+  for(i in 1:nrow(mapping_df)){
+    df <- df %>% 
+      rename(!!new_col_name[i] := !!original_col_name[i])
+  }
+  return(df)
+}
