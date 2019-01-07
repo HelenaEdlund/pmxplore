@@ -7,10 +7,10 @@
 #'  \code{\link[grid]{grid.newpage}},\code{\link[grid]{grid.draw}}
 #' @rdname grob_draw
 #' @export 
-#' @importFrom grid grid.newpage grid.draw
+#' @importFrom grid is.grob grid.newpage grid.draw
 
 grob_draw <- function(x){
-  if(is.grob(x)){
+  if(grid::is.grob(x)){
     grid::grid.newpage()
     grid::grid.draw(x)
   } else {
