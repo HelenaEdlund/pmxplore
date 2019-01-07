@@ -8,7 +8,8 @@
 #' @param hjust hjust passed to theme axis.text.x, Default: 1
 #' @return ggplot object (passed to ggally)
 #' @rdname ally_bar
-#' @export 
+# trying to simplify, not exporting ally support for now. 
+# #' @export 
 #' @import ggplot2 
 
 ally_bar <- function(data, mapping, numbers=F, angle=40, hjust=1){
@@ -55,7 +56,7 @@ ally_bar <- function(data, mapping, numbers=F, angle=40, hjust=1){
 #' @return ggplot object (passed to ggally)
 #' @details DETAILS
 #' @rdname ally_box
-#' @export 
+# #' @export 
 #' @import ggplot2 
 
 ally_box <- function(data, mapping, angle=40, hjust=1, x.grid=F){
@@ -88,7 +89,7 @@ ally_box <- function(data, mapping, angle=40, hjust=1, x.grid=F){
 #' @seealso 
 #'  \code{\link[vcd]{assocstats}}
 #' @rdname ally_cor
-#' @export 
+# #' @export 
 #' @importFrom vcd assocstats
 #' @import ggplot2 
 
@@ -186,7 +187,7 @@ ally_cor <- function(data, mapping,
 #' @return ggplot object (passed to ggally)
 #' @details counts: one of 'abs' or 'rel'. To be expanded.
 #' @rdname ally_count
-#' @export
+# #' @export
 #' @importFrom dplyr group_by mutate  
 ally_count <- function(data, mapping, counts="rel", 
                        angle = 35, hjust_x=1, vjust_y=0, ...){
@@ -293,7 +294,7 @@ ally_count <- function(data, mapping, counts="rel",
 #' @param ... PARAM_DESCRIPTION
 #' @return ggplot object (passed to ggally)
 #' @rdname ally_scatter_lm_cor
-#' @export 
+# #' @export 
 
 ally_scatter_lm_cor <- 
   function(data, mapping, 
