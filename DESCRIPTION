@@ -3,12 +3,13 @@ Title: Customized (gg)plots for PK/PD data
 Version: 0.1.0
 Authors@R: c(
     person("Helena", "Edlund", email = "helena.edlund@astrazeneca.com", role = c("aut", "cre")),
-    person("Devin", "Pastoor", email = "devin.pastoor@gmail.com", role = c("aut"))
+    person("Devin", "Pastoor", email = "devin.pastoor@gmail.com", role = c("aut")),
+    person("Philip", "Delff", email = "philip.delff@astrazeneca.com", role = c("aut"))
     )
-Description: This package contains wrappers for ggplot and ggally for exploration of pharmacokinetic/pharmacodynamic data
+Description: This package contains wrappers for ggplot for exploration of pharmacokinetic/pharmacodynamic data
 Depends:
     R (>= 3.2.4)
-License: MIT + file license
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
@@ -20,4 +21,3 @@ Imports:
     magrittr
 Suggests:
     testthat
-VignetteBuilder: knitr
