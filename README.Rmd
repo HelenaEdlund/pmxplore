@@ -1,7 +1,0 @@
-PMXPLORE
-=======
-
-**UNDER DEVELOPMENT**
-
-Functions for data review and exploratory data analysis commonly performed in pharmacometric analyses. Mainly containing wrapper functions for ggplot and GGally as well as functions for summary statistics.
-

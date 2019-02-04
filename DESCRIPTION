@@ -2,9 +2,10 @@ Package: pmxplore
 Title: Customized (gg)plots for PK/PD data
 Version: 0.1.0
 Authors@R: c(
-    person("Helena", "Edlund", email = "helena.edlund@astrazeneca.com", role = c("aut", "cre")),
-    person("Devin", "Pastoor", email = "devin.pastoor@gmail.com", role = c("aut")),
-    person("Philip", "Delff", email = "philip.delff@astrazeneca.com", role = c("aut"))
+    person("Helena", "Edlund", email = "helena.edlund@astrazeneca.com",
+    role = c("aut", "cre"), comment = c(ORCID = "0000-0002-4036-0831")), 
+    person("Philip", "Delff", email = "philip.delff@astrazeneca.com", role = c("aut")),
+    person("Devin", "Pastoor", email = "devin.pastoor@gmail.com", role = c("aut"))
     )
 Description: This package contains wrappers for ggplot for exploration of pharmacokinetic/pharmacodynamic data
 Depends:
