@@ -1,5 +1,0 @@
-Needed: 
-
-NONMEM output file to use with r_data_staructure, nm=T
-
-If expanding to JSON: add dataspec example for that
