@@ -13,5 +13,7 @@ pharmacokinetic/pharmacodynamic data
 \author{
 Helena Edlund \email{helena.edlund@astrazeneca.com}
 
+Philip Delff \email{philip.delff@astrazeneca.com}
+
 Devin Pastoor \email{devin.pastoor@gmail.com}
 }
